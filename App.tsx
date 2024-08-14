@@ -1,12 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
+import "'@/global.css'";
 import { StyleSheet, Text, View } from 'react-native';
+import { GluestackUIProvider } from './components/ui/gluestack-ui-provider';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text className='flex-1'>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <GluestackUIProvider mode="light"><View style={styles.container}>
+        <Text className='flex-1'>Open up App.tsx to start working on your app!</Text>
+        <StatusBar style="auto" />
+      </View></GluestackUIProvider>
   );
 }
 
